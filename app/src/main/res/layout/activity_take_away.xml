@@ -60,6 +60,40 @@
         android:inputType="textLongMessage|textPersonName"
         android:textColor="@android:color/black" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/txt_tgl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Date" />
+
+        <EditText
+            android:id="@+id/txt_jam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Time" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_get_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Date Time" />
+
     <Button
         android:id="@+id/pilihPesanan"
         android:layout_width="wrap_content"
@@ -67,6 +101,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="Pilih Pesanan"
-        android:onClick="pilih"
         android:textColor="@android:color/holo_blue_dark" />
+
 </LinearLayout>
