@@ -9,8 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class DaftarMenuActivity extends AppCompatActivity {
+
     public static ArrayList<Menu> menuList = new ArrayList<>();
 
+    //Mendeklarasikan variable dari Recyclerview dan MenusAdapter
     private RecyclerView recyclerView;
     private MenusAdapter mAdapter;
 
@@ -22,7 +24,9 @@ public class DaftarMenuActivity extends AppCompatActivity {
         menuList = isiMenu();
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
+        //Mendeklarasikan menu adapter
         mAdapter = new MenusAdapter(menuList);
+        //Menggunakan linear layout
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

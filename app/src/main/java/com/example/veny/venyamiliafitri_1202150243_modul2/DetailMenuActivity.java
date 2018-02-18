@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 public class DetailMenuActivity extends AppCompatActivity {
+    //Mendeklarasikan variable
     private ArrayList<Menu> menus;
     private String tanda;
     private TextView nama, harga, komposisi;
@@ -22,9 +23,12 @@ public class DetailMenuActivity extends AppCompatActivity {
         komposisi = (TextView)findViewById(R.id.tvDetail);
         photo = (ImageView)findViewById(R.id.ivPhoto);
 
+        //Memanggil menuList dari DaftarMenuActivity
         menus = DaftarMenuActivity.menuList;
+        //Melakukan get data dari DaftarMenuActivity menggunakan Intent
         Intent c = getIntent();
         tanda = c.getStringExtra("MenuID");
+        //Melakukan get tanda lalu set data sesuai dengan data yang didapat dari activity sebelumnya
         Menu menu = menus.get(Integer.parseInt(tanda));
         nama.setText(menu.getNama());
         harga.setText(menu.getHarga());

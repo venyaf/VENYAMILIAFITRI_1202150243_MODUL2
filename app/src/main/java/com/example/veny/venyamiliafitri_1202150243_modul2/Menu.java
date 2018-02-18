@@ -5,16 +5,18 @@ package com.example.veny.venyamiliafitri_1202150243_modul2;
  */
 
 public class Menu {
+    //Mendeklarasikan nama variable
     int photo;
     private String nama, harga, komposisi;
 
+    //Konstruktor dari class menu yang berisi parameter
     public Menu(int photo, String nama, String harga, String komposisi) {
         this.photo = photo;
         this.nama = nama;
         this.harga = harga;
         this.komposisi = komposisi;
     }
-
+    //Setter dan getter
     public int getPhoto() {
         return photo;
     }
